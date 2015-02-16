@@ -29,7 +29,7 @@ $(document).ready(function() {
     // $("button#complete").click(function() {
     //   $('#tasks li').appendTo("ul#completed");
     //   $(this).remove();
-    // });
+    // }); could remove button after move, but moved all li items rather than one... has potential, though
 
   });
 });
