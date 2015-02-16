@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>To Do List 3.0</title>
+    <link rel="stylesheet" href="css/bootstrap.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="css/styles.css" media="screen" title="no title" charset="utf-8">
+    <script src="js/jquery-1.11.2.js"></script>
+    <script src="js/scripts.js"></script>
+  </head>
+  <body>
+    <h2>To Do List!</h2>
+    <div class="container">
+      <form id="to-do">
+        <div class= "form-group">
+          <label for="task">Task</label>
+          <input type="text" id="task">
+        </div>
+        <div class= "form-group">
+          <label for="due_date">Due Date</label>
+          <input type="text" id="due_date">
+        </div>
+        <div class= "form-group">
+          <label for="details">Details</label>
+          <input type="text" id="details">
+        </div>
+        <button type="submit" class="btn btn-warning">Submit Task</button>
+      </form>
+
+      <hr>
+
+      <h4>Tasks</h4>
+      <ul id ="tasks">
+
+      </ul>
+      <hr>
+
+      <div id="this-task">
+        <h4></h4>
+        <!-- <p>Task: <span class="Task"></span></p> -->
+        <p>Due_Date: <span class="Due_Date"></span></p>
+        <p>Details: <span class="Details"></span></p>
+
+      </div>
+    </div>
+  </body>
+</html>
