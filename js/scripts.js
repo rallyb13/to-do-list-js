@@ -1,6 +1,6 @@
 $(document).ready(function() {
   $('form#to-do').submit(function(event) {
-
+    event.preventDefault();
 
     var inputTask = $('input#task').val();
     var inputDueDate = $('input#due_date').val();
@@ -8,8 +8,8 @@ $(document).ready(function() {
 
     var newToDo = {task: inputTask, dueDate: inputDueDate, details: inputDetails};
 
-    $('ul#tasks').append("<li><span class='task'>" + newToDo.task + "</span></li>")
-
+    $('ul#tasks').append("<li><span class='task '>" + newToDo.task + "</span></li>");
+    // $('ul#tasks').append("<button class='btn btn-sm btn-info' id='complete'>Completed?</button>");
     $('input#task').val("");
     $('input#due_date').val("");
     $('input#details').val("");
@@ -20,10 +20,16 @@ $(document).ready(function() {
 
       $(".Due_Date").text(newToDo.dueDate);
       $(".Details").text(newToDo.details);
-
-
-
     });
-    event.preventDefault();
+
+    $("li").last().dblclick(function() {
+      $(this).appendTo("ul#completed");
+    });
+
+    // $("button#complete").click(function() {
+    //   $('#tasks li').appendTo("ul#completed");
+    //   $(this).remove();
+    // });
+
   });
 });
